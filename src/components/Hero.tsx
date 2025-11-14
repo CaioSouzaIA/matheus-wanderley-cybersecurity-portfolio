@@ -47,7 +47,7 @@ const Hero = () => {
               <Button 
                 size="lg" 
                 variant="outline"
-                className="border-primary text-foreground hover:bg-primary/10 transition-all duration-300"
+                className="border-primary text-foreground hover:bg-black hover:text-primary transition-all duration-300"
                 onClick={() => scrollToSection('experiencia')}
               >
                 Ver Experiência
