@@ -63,7 +63,8 @@ const Skills = () => {
           {skillCategories.map((category, index) => (
             <div 
               key={index}
-              className="bg-card border border-border rounded-lg p-6 hover:border-primary/50 transition-all duration-300"
+              className="bg-card rounded-lg p-6 relative overflow-hidden before:absolute before:inset-0 before:rounded-lg before:p-[2px] before:bg-gradient-to-br before:from-primary before:to-white before:-z-10 before:content-[''] hover:before:from-primary hover:before:via-white hover:before:to-primary transition-all duration-300"
+              style={{ background: 'linear-gradient(hsl(var(--card)), hsl(var(--card))) padding-box, linear-gradient(135deg, hsl(var(--primary)), white) border-box', border: '2px solid transparent' }}
             >
               <h3 className="text-2xl font-semibold text-foreground mb-6 flex items-center gap-2">
                 <span className="w-2 h-2 bg-primary rounded-full" />
