@@ -86,7 +86,7 @@ const Contact = () => {
               <Button 
                 size="lg" 
                 variant="outline"
-                className="border-primary text-foreground hover:bg-primary/10"
+                className="border-primary text-foreground hover:bg-black hover:text-primary transition-all duration-300"
                 asChild
               >
                 <a 
