@@ -24,9 +24,6 @@ const Hero = () => {
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Text Content */}
           <div className="space-y-6 text-center lg:text-left order-2 lg:order-1">
-            <p className="text-cyber-blue text-sm uppercase tracking-wider font-semibold">
-              Olá, eu sou
-            </p>
             <h1 className="text-5xl md:text-7xl font-bold text-foreground leading-tight">
               MATHEUS
               <br />
