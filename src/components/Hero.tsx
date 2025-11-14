@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { ArrowDown } from "lucide-react";
-import heroPhoto from "@/assets/hero-photo.png";
+import heroBackground from "@/assets/hero-background.png";
 
 const Hero = () => {
   const scrollToSection = (id: string) => {
@@ -10,20 +10,20 @@ const Hero = () => {
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Background with overlay */}
-      <div className="absolute inset-0 bg-gradient-to-br from-dark-slate via-slate to-dark-slate">
-        <div className="absolute inset-0 opacity-10">
-          <div className="absolute inset-0" style={{
-            backgroundImage: `linear-gradient(rgba(16, 185, 129, 0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(16, 185, 129, 0.1) 1px, transparent 1px)`,
-            backgroundSize: '50px 50px'
-          }} />
-        </div>
+      {/* Background Image with overlay */}
+      <div className="absolute inset-0">
+        <img 
+          src={heroBackground} 
+          alt="Background"
+          className="w-full h-full object-cover"
+        />
+        <div className="absolute inset-0 bg-dark-slate/80" />
       </div>
 
       <div className="container mx-auto px-4 relative z-10">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+        <div className="flex items-center justify-center">
           {/* Text Content */}
-          <div className="space-y-6 text-center lg:text-left order-2 lg:order-1">
+          <div className="space-y-6 text-center max-w-3xl">
             <h1 className="text-5xl md:text-7xl font-bold text-foreground leading-tight">
               MATHEUS
               <br />
@@ -32,11 +32,11 @@ const Hero = () => {
             <p className="text-2xl md:text-3xl text-muted-foreground font-light">
               Especialista em Cibersegurança
             </p>
-            <p className="text-lg text-muted-foreground max-w-xl mx-auto lg:mx-0">
+            <p className="text-lg text-muted-foreground max-w-xl mx-auto">
               Protegendo infraestruturas e identificando vulnerabilidades através de soluções 
               inteligentes em segurança da informação
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start pt-4">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4">
               <Button 
                 size="lg" 
                 className="bg-primary hover:bg-primary/90 text-primary-foreground shadow-lg hover:shadow-primary/50 transition-all duration-300"
@@ -52,18 +52,6 @@ const Hero = () => {
               >
                 Ver Experiência
               </Button>
-            </div>
-          </div>
-
-          {/* Image */}
-          <div className="flex justify-center order-1 lg:order-2">
-            <div className="relative">
-              <div className="absolute inset-0 bg-primary/20 rounded-lg blur-3xl animate-glow" />
-              <img 
-                src={heroPhoto} 
-                alt="Matheus Wanderley"
-                className="relative rounded-lg w-full max-w-md lg:max-w-lg shadow-2xl border border-primary/20"
-              />
             </div>
           </div>
         </div>
